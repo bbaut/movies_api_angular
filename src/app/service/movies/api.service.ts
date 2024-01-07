@@ -21,7 +21,7 @@ export class ApiService {
     return this.http.get<any>(this.urlApi + `&page=${this.page}`, {'headers': headers});
   }
 
-  public setTest(value: number) {
+  public setPage(value: number) {
     this.page = value;
   }
 }

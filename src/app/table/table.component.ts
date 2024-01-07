@@ -1,6 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../service/movies/api.service';
 
+type Movies = {
+  title: String;
+  release_date: String;
+  popularity: String;
+  vote_average: String;
+}
+
 @Component({
   selector: 'app-table',
   templateUrl: './table.component.html',
@@ -11,8 +18,8 @@ export class TableComponent implements OnInit {
   total_pages!: number;
   pages: number[] = [1,2,3,4,5,6];
   activePage!: number;
-  filteredMoviesList: any = [];
-  moviesList: any = [];
+  filteredMoviesList: Movies[] = [];
+  moviesList: Movies[] = [];
 
   constructor(private apiService: ApiService) {
     this.activePage = 1;
@@ -31,7 +38,7 @@ export class TableComponent implements OnInit {
   }
 
   sendValueIntoService(value: number) {
-    this.apiService.setTest(value);
+    this.apiService.setPage(value);
     this.getData();
     this.activePage = value;
 

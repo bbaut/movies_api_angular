@@ -2,7 +2,6 @@
     <h1>Data movies</h1>
 
     <input (input)="filterResults(filter.value)" type="text" placeholder="Buscar pelicula por título" #filter>
-    <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
 
     <table style="width:100%">
         <tr>
@@ -28,6 +27,5 @@
         <ng-template #notActive>
             <button (click)="sendValueIntoService(page)">{{page}}</button>
           </ng-template>
-        <!-- <button (click)="sendValueIntoService(page)">{{page}}</button> -->
     </div>
 </div>
