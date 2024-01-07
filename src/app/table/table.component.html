@@ -1,0 +1,33 @@
+<div>
+    <h1>Data movies</h1>
+
+    <input (input)="filterResults(filter.value)" type="text" placeholder="Buscar pelicula por título" #filter>
+    <!-- <button class="primary" type="button" (click)="filterResults(filter.value)">Search</button> -->
+
+    <table style="width:100%">
+        <tr>
+            <th>Título</th>
+            <th>Fecha de lanzamiento</th>
+            <th>Popularidad</th>
+            <th>Voto promedio</th>
+        </tr>
+        <tr *ngFor="let item of filteredMoviesList">
+            <td>{{item.title | json}}</td>
+            <td>{{item.release_date | json}}</td>
+            <td>{{item.popularity | json}}</td>
+            <td>{{item.vote_average | json}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="pagination">
+    <div class="pagination-block" *ngFor="let page of pages">
+        <div *ngIf="page === activePage; else notActive">
+            <button (click)="sendValueIntoService(page)" class="active-button">{{page}}</button>
+        </div>
+        <ng-template #notActive>
+            <button (click)="sendValueIntoService(page)">{{page}}</button>
+          </ng-template>
+        <!-- <button (click)="sendValueIntoService(page)">{{page}}</button> -->
+    </div>
+</div>

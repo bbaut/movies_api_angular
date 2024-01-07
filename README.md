@@ -2,9 +2,17 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.10.
 
-## Development server
+## Run development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+In order to run this application you need to create the enviroments with the next command: 
+`ng generate environments`
+
+then, you should specificy on the file [environment.development.ts] the next variables: *production, apiAuth and urlAPI* 
+The urlAPI comes from: `https://api.themoviedb.org`
+The API auth referes to the API Key given by `https://api.themoviedb.org`
+
+Once done, run `ng serve` for a dev server. Navigate to `http://localhost:4200/`.
+
 
 ## Code scaffolding
 

@@ -1,0 +1,43 @@
+* {
+    font-size: 1rem;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+table {
+    border-collapse: collapse
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+input {
+    margin: 4px 2px;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    margin: 4px 2px;
+}
+
+button:hover {
+    background-color: #7abaff;
+    color: white;
+}
+
+.pagination-block {
+    display: inline-block;
+}
+
+.pagination .pagination-block .active-button{
+    background-color: white;
+    color: black;
+}
